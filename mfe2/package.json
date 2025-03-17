@@ -1,0 +1,44 @@
+{
+	"name": "mfe1",
+	"description": "Microfrontend module example in React js using Webpack 5 and module federation.",
+	"version": "1.0.0",
+	"author": {
+		"name": "André Rosa",
+		"email": "andreros@gmail.com"
+	},
+	"license": "Unlicense",
+	"scripts": {
+		"build": "cross-env NODE_ENV=production webpack --mode production",
+		"dev": "webpack-cli serve",
+		"dev:standalone": "cross-env STANDALONE=true webpack-cli serve",
+		"lint": "biome check --diagnostic-level=warn",
+		"lint:fix": "biome check --write . --diagnostic-level=warn",
+		"nuke": "git add . && git clean -f -x -d && rm -rf package-lock.json && npm cache clean --force && npm i",
+		"serve": "serve dist -p 3004"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/react": "18.2.24",
+		"@types/react-dom": "18.2.0",
+		"bundle-loader": "0.5.6",
+		"cross-env": "7.0.3",
+		"css-loader": "7.1.2",
+		"dotenv": "16.4.7",
+		"html-webpack-plugin": "5.6.3",
+		"sass": "1.85.1",
+		"sass-loader": "16.0.5",
+		"style-loader": "4.0.0",
+		"ts-loader": "9.5.2",
+		"typescript": "5.8.2",
+		"webpack": "5.98.0",
+		"webpack-cli": "6.0.1",
+		"webpack-dev-server": "5.2.0"
+	},
+	"dependencies": {
+		"@cloudbeds/webpack-module-federation-types-plugin": "2.1.1",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-router": "6.3.0",
+		"react-router-dom": "6.30.0"
+	}
+}
