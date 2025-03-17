@@ -1,6 +1,6 @@
 {
 	"name": "host",
-	"description": "Microfrontend host application sample in react js using webpack 5 and module federation.",
+	"description": "Microfrontend host application sample in React js using Webpack 5 and module federation.",
 	"version": "1.0.0",
 	"author": {
 		"name": "André Rosa",
@@ -12,7 +12,7 @@
 		"dev": "webpack-cli serve",
 		"lint": "biome check --diagnostic-level=warn",
 		"lint:fix": "biome check --write . --diagnostic-level=warn",
-		"nuke": "rm -rf package-lock.json && npm cache clean --force && npm i",
+		"nuke": "git add . && git clean -f -x -d && rm -rf package-lock.json && npm cache clean --force && npm i",
 		"serve": "serve dist -p 3001"
 	},
 	"devDependencies": {
