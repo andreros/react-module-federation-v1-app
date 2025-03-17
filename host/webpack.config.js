@@ -14,6 +14,10 @@ const mfe1RemoteEntry =
 	(envVars
 		? envVars.REACT_APP_MFE1_REMOTE_ENTRY
 		: process.env.REACT_APP_MFE1_REMOTE_ENTRY) || "";
+const mfe2RemoteEntry =
+	(envVars
+		? envVars.REACT_APP_MFE2_REMOTE_ENTRY
+		: process.env.REACT_APP_MFE2_REMOTE_ENTRY) || "";
 const publicUrl =
 	(envVars ? envVars.PUBLIC_URL : process.env.PUBLIC_URL) || "/public";
 
@@ -92,6 +96,7 @@ module.exports = {
 			name: "host",
 			remotes: {
 				mfe1: `mfe1@${mfe1RemoteEntry}`,
+				mfe2: `mfe2@${mfe2RemoteEntry}`,
 			},
 			shared: {
 				...transformDependencies(packageJson.dependencies),

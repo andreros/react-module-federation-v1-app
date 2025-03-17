@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 const HomePage = lazy(() => import("@pages/homePage"));
 const AnotherPage = lazy(() => import("@pages/anotherPage"));
 const Mfe1 = lazy(() => import("mfe1/appPage") as any);
+const Mfe2 = lazy(() => import("mfe2/appPage") as any);
 
 export const Router: React.FC = () => {
 	return (
@@ -14,6 +15,14 @@ export const Router: React.FC = () => {
 					element={
 						<Suspense fallback={<>Loading...</>}>
 							<Mfe1 />
+						</Suspense>
+					}
+				/>
+				<Route
+					path="home/mfe2/*"
+					element={
+						<Suspense fallback={<>Loading...</>}>
+							<Mfe2 />
 						</Suspense>
 					}
 				/>
