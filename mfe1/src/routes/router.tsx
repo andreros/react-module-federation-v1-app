@@ -9,10 +9,10 @@ export const Router: React.FC = () => {
 	return (
 		<Routes>
 			<Route
-				path="user/detail"
+				path="user/details"
 				element={
 					<Suspense fallback={<>Loading...</>}>
-						<h1>User Detail</h1>
+						<h1>User Details</h1>
 					</Suspense>
 				}
 			/>

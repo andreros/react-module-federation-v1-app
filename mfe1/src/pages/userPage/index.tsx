@@ -7,7 +7,7 @@ const UserPage: React.FC = () => {
 	return (
 		<div className="mfe1-user-page">
 			<h1>MFE 1 User Page</h1>
-			<button type="button" onClick={() => navigate("detail")}>
+			<button type="button" onClick={() => navigate("details")}>
 				Go to "User Details" page
 			</button>
 		</div>
